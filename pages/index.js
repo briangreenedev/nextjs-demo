@@ -5,6 +5,8 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   const [n, setN] = useState(0);
+  const [nColor, setNColor] = useState('red');
+
   return (
     <div className={styles.container}>
       <Head>
@@ -33,12 +35,12 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href="javascript:void(0)" onClick={() => (n < 100 && setN(n + 1)) && setColor(getRandomColor())} className={styles.card}>
+          <a href="javascript:void(0)" onClick={() => (n < 100 && setN(n + 1))} className={styles.card}>
             <h2>CLICK ME</h2>
             <p>I know you cannot resist</p>
           </a>
         </div>
-        <div style={{fontSize:`${3 * n}px`, fontWeight: '900', color:n === 100 && 'green', height: '350px'}}>
+        <div style={{fontSize:`${3 * n}px`, fontWeight: '900', color:(n === 100 && 'green') || 'red', height: '350px'}}>
           {n}
         </div>
       </main>
