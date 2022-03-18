@@ -40,7 +40,7 @@ export default function Home() {
             <p>I know you cannot resist</p>
           </a>
         </div>
-        <div style={{fontSize:`${3 * n}px`, fontWeight: '900', color:(n === 100 && 'green') || 'red', height: '350px'}}>
+        <div style={{fontSize:`${3 * n}px`, fontWeight: '900', color:n === 100 && 'green' || 'purple', height: '350px'}}>
           {n}
         </div>
       </main>
